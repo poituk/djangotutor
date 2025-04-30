@@ -1,0 +1,16 @@
+.titleMain{
+    text-align: center;
+    font-family: 'TT Moons Trial', sans-serif;
+    background-color: antiquewhite;
+    padding: 1%;
+}
+.titleMain a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: 0;
+}
