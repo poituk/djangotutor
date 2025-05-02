@@ -1,10 +1,15 @@
 {% extends 'blog/base.html' %}
 {% block content %}
    {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+        <div class = "container">
+            <div class="pst m-5 p-4 border border-primary rounded">
+                <h1 class="text-center pt-2 pb-2"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <p class = "border-bottom border-primary pb-4">{{ post.text|linebreaksbr }}</p>
+                <div class = "d-flex justify-content-between">
+                    <p>Автор: {{post.author}}</p>
+                    <p>Опубликовано: {{ post.published_date }}</p>
+                </div>
+            </div>
         </div>
     {% endfor %}
 {% endblock %}
